@@ -1,0 +1,40 @@
+<table class="table table-striped table-success table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data</th>
+            <th scope="col">Numero</th>
+            <th scope="col">Anno</th>
+            <th scope="col">Importo</th>
+            <th scope="col">Stato</th>
+            <th scope="col">Cliente</th>
+            <th>
+                <p>Ordina:</p>
+                <select class="form-select" [(ngModel)]="chosenMod" (ngModelChange)="modo()">
+                    <option value="mod1">ordina per stato</option>
+                    <option value="mod2">ordina per anno</option>
+                    <option value="mod3">ordina per data</option>
+                    <option value="mod4">ordina per importo</option>
+                </select>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of fattura">
+            <td>{{item.id}}</td>
+            <td>{{item.data}}</td>
+            <td>{{item.numero}}</td>
+            <td>{{item.anno}}</td>
+            <td>{{item.importo}}</td>
+            <td>{{item.stato.nome}}</td>
+            <td>{{item.cliente.ragioneSociale}}</td>
+            <td class="d-flex">
+                <button type="button" class="btn btn-info btn-sm mx-2" (click)="detailFattura(item)">Dettagli<i
+                        class="bi bi-file-person"></i></button>
+
+                <button type="button" class="btn btn-danger btn-sm" (click)="remove(item)">Cancella</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

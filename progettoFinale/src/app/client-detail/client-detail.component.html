@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+      Informazioni di: <b>{{client.ragioneSociale}}</b>
+    </div>
+    <div class="card-body">
+     <p><b>Partita IVA:</b> {{client.partitaIva}}</p>
+     <p><b>Tipo cliente:</b> {{client.tipoCliente}}</p>
+     <p><b>Email:</b> {{client.email}}</p>
+     <p><b>PEC:</b> {{client.pec}}</p>
+     <p><b>Telefono:</b> {{client.telefono}}</p>
+     <p><b>Nome contatto:</b> {{client.nomeContatto}}</p>
+     <p><b>Cognome contatto:</b> {{client.cognomeContatto}}</p>
+     <p><b>Telefono contatto:</b> {{client.telefonoContatto}}</p>
+     <p><b>Email contatto:</b> {{client.emailContatto}}</p>
+     <p><b>Indirizzo sede operativa:</b></p>
+     <ul>
+      <li>{{client.indirizzoSedeOperativa.via}}</li>
+      <li>{{client.indirizzoSedeOperativa.civico}}</li>
+      <li>{{client.indirizzoSedeOperativa.cap}}</li>
+      <li>{{client.indirizzoSedeOperativa.localita}}</li>
+      <li>Comune: {{client.indirizzoSedeOperativa.comune.nome}} </li>
+      <li>Provincia: {{client.indirizzoSedeOperativa.comune.provincia.nome}} ({{client.indirizzoSedeOperativa.comune.provincia.sigla}}) </li>
+    </ul>
+     <p><b>Indirizzo sede legale:</b></p>
+      <ul>
+        <li>{{client.indirizzoSedeLegale.via}}</li>
+        <li>{{client.indirizzoSedeLegale.civico}}</li>
+        <li>{{client.indirizzoSedeLegale.cap}}</li>
+        <li>{{client.indirizzoSedeLegale.localita}}</li>
+        <li>Comune: {{client.indirizzoSedeLegale.comune.nome}} </li>
+        <li>Provincia: {{client.indirizzoSedeLegale.comune.provincia.nome}} ({{client.indirizzoSedeLegale.comune.provincia.sigla}}) </li>
+      </ul>
+    
+   
+     <p><b>Data inserimento:</b> {{client.dataInserimento}}</p>
+     <p><b>Data ultimo contatto:</b> {{client.dataUltimoContatto}}</p>
+     <p><b>Fatturato annuale: </b>{{client.fatturatoAnnuale}}</p>
+    </div>
+    <div class="card-footer">
+      <button class=" btn btn-info" (click)="edit(client)" >Modifica dati cliente</button>
+    </div>
+    <div class="container mt-5">
+      <h3 style="background-color: lightgray;">Fatture del cliente:</h3>
+      <ul>
+        <li *ngFor="let item of fattura">
+        <a href="#" [routerLink]="['fatture', item.id, 'detail']"> {{item.data}} </a>
+        </li>
+      </ul>
+
+    </div>
+    
+
+  </div>

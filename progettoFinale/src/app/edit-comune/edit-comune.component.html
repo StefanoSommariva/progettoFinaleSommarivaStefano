@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        <h3>Modifica informazioni comune</h3>
+    </div>
+    <div class="card-body">
+        <div class="d-flex flex-column my-3">
+            <label for="nomeComune">Modifica nome comune:</label>
+            <input type="text" [(ngModel)]="comune.nome" name="nomeComune">
+        </div>
+        <div class="d-flex flex-column my-3">
+            <label for="idComune">Modifica id comune:</label>
+            <input type="text" [(ngModel)]="comune.id" name="idComune">
+        </div>
+        <div>
+            <p class="card-text">provincia: </p>
+            <input type="text" [(ngModel)]="comune.provincia.nome" name="provinciaComune">
+            <input type="text" [(ngModel)]="comune.provincia.sigla" name="siglaProvincia">
+        </div>
+
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-info" (click)="update()">Salva modifiche</button>
+    </div>
+</div>

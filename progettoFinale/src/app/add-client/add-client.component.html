@@ -1,0 +1,82 @@
+<div class="card text-center mainCard">
+    <div class="card-header">
+        <h2>Aggiungi nuovo cliente</h2>
+    </div>
+    <div class="card-body">
+
+
+        <label for="ragioneSociale">Ragione sociale:</label>
+        <input type="text" [(ngModel)]="client.ragioneSociale" name="ragioneSociale" class="form-control mb-2">
+        <label for="partitaIva">Partita IVA:</label>
+        <input type="number" [(ngModel)]="client.partitaIva" name="partitaIva" class="form-control mb-2">
+        <label for="tipoCliente">Tipo cliente:</label>
+        <div>
+            <select [(ngModel)]="client.tipoCliente" [ngModelOptions]="{standalone: true}">
+                <option [ngValue]="item" *ngFor="let item of tipoCliente">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+
+
+        <label for="email">Email:</label>
+        <input type="email" [(ngModel)]="client.email" name="email" class="form-control mb-2">
+        <label for="pec">PEC:</label>
+        <input type="email" [(ngModel)]="client.pec" name="pec" class="form-control mb-2">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" [(ngModel)]="client.telefono" name="telefono" class="form-control mb-2">
+        <label for="nomeContatto">Nome contatto:</label>
+        <input type="text" [(ngModel)]="client.nomeContatto" name="nomeContatto" class="form-control mb-2">
+        <label for="cognomeContatto">Cognome contatto:</label>
+        <input type="text" [(ngModel)]="client.cognomeContatto" name="cognomeContatto" class="form-control mb-2">
+        <label for="telefonoContatto">Telefono contatto:</label>
+        <input type="tel" [(ngModel)]="client.telefonoContatto" name="telefonoContatto" class="form-control mb-2">
+        <label for="emailContatto">Email contatto:</label>
+        <input type="email" [(ngModel)]="client.emailContatto" name="emailContatto" class="form-control mb-2">
+
+        <div class="container text-left my-5">
+            <h4>Indirizzo sede operativa:</h4>
+
+            <div>
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" name="via_indirizzoOperativo"
+                    class="form mb-2 form-control" placeholder="via..">
+                <input type="number" [(ngModel)]="client.indirizzoSedeOperativa.civico" name="civico" class="form mb-2 form-control"
+                    placeholder="Numero civico..">
+                <input type="number" [(ngModel)]="client.indirizzoSedeOperativa.cap" name="cap" class="form mb-2 form-control"
+                    placeholder="CAP..">
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.localita" name="localita"
+                    class="form mb-2 form-control" placeholder="Località..">
+        
+                <h5>Comune:</h5>
+                <select [(ngModel)]="client.indirizzoSedeOperativa.comune" [ngModelOptions]="{standalone: true}">
+                    <option value="" disabled>Seleziona il comune</option>
+                    <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container text-left">
+            <h4>Indirizzo sede legale:</h4>
+
+            <div>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" name="via_indirizzoLegale"
+                    class="form mb-2 form-control" placeholder="via..">
+                <input type="number" [(ngModel)]="client.indirizzoSedeLegale.civico" name="civico_indirizzoOperativo"
+                    class="form mb-2 form-control" placeholder="Numero civico..">
+                <input type="number" [(ngModel)]="client.indirizzoSedeLegale.cap" name="cap__indirizzoOperativo"
+                    class="form mb-2 form-control" placeholder="CAP..">
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" name="client_indirizzoOperativo"
+                    class="form mb-2 form-control" placeholder="Località..">
+          
+                <h5>Comune:</h5>
+                <select [(ngModel)]="client.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-footer my-5">
+        <button type="button" class="btn btn-dark" (click)="newClient()">Aggiungi cliente</button>
+    </div>
+</div>

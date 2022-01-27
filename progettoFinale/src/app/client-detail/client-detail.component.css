@@ -1,0 +1,12 @@
+ul li a {
+    color: grey;
+    text-decoration: none;
+}
+ul li a:visited {
+    color: darkorchid;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: black;
+    text-decoration: underline;
+}

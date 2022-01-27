@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header">
+        <h3>Modifica provincia</h3>
+    </div>
+    <div class="card-body">
+        <label for="idProvincia">Id provincia:</label>
+        <input type="number" [(ngModel)]="provincia.id" name="idProvincia" class="form-control">
+        <label for="provinciaNome">Nome provincia:</label>
+        <input type="text" [(ngModel)]="provincia.nome" name="provinciaNome" class="form-control">
+        <label for="siglaProvincia">Sigla provincia:</label>
+        <input type="text" [(ngModel)]="provincia.sigla" name="siglaProvincia" class="form-control">
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-info" (click)="update()">Salva modifiche</button>
+    </div>
+</div>

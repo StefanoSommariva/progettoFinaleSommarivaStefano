@@ -1,0 +1,11 @@
+ul li:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+}
+.background{
+background-color: rgba(211, 211, 211, 0.568);
+border-radius: 5px;
+padding: 3em;
+margin: 2em;
+box-shadow:15px 15px rgba(0, 0, 0, 0.438)
+}

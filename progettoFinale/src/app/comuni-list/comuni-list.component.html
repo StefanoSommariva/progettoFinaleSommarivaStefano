@@ -1,0 +1,13 @@
+<div class="background">
+    <h3 class="my-4">Lista comuni:</h3>
+    <hr>
+    <ul>
+        <li *ngFor="let item of comuni" class="d-flex justify-content-between my-1">
+            {{item.nome}}
+            <div>
+                <button type="button" class="btn btn-info btn-sm mx-2" (click)="detail(item)">Dettaglio</button>
+                <button type="button" class="btn btn-info btn-sm mx-2" (click)="delete(item)">Elimina</button>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-header">
+        Dettagli fattura
+    </div>
+    <div class="card-body">
+
+        <p class="card-text">Id: {{fattura.id}}</p>
+        <p class="card-text">Data: {{fattura.data}}</p>
+        <p class="card-text">Numero: {{fattura.numero}}</p>
+        <p class="card-text">Anno: {{fattura.anno}}</p>
+        <p class="card-text">Importo: {{fattura.importo}}</p>
+        <p class="card-text">Stato fattura: {{fattura.stato.nome}}</p>
+        <div class="card class-container">
+            <div class="card-header">
+                azienda :<h3><b>{{fattura.cliente.ragioneSociale}}</b></h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><b>Partita Iva:</b> {{fattura.cliente.partitaIva}}</p>
+                <p class="card-text"><b>Tipo cliente:</b> {{fattura.cliente.tipoCliente}}</p>
+                <p class="card-text"><b>Email: </b> {{fattura.cliente.email}}</p>
+                <p class="card-text"><b>Pec</b> : {{fattura.cliente.pec}}</p>
+                <p class="card-text"><b>Telefono: </b>{{fattura.cliente.telefono}}</p>
+                <p class="card-text"><b>Nome contatto: {{fattura.cliente.nomeContatto}}</b></p>
+                <p class="card-text"><b>Cognome contatto: </b>{{fattura.cliente.cognomeContatto}}</p>
+                <p class="card-text"><b>Numero contatto: </b>{{fattura.cliente.telefonoContatto}}</p>
+                <p class="card-text"><b>Email contatto: </b>{{fattura.cliente.pec}}</p>
+
+
+
+                <div class="container mb-5">
+                    <p style="background-color:lightgray;"><small>Indirizzo sede operativa:</small></p>
+                    <p class="card-text"><b>Via :</b> :{{fattura.cliente.indirizzoSedeOperativa.via}}</p>
+                    <p class="card-text"><b>Civico :</b> : {{fattura.cliente.indirizzoSedeOperativa.civico}}</p>
+                    <p class="card-text"><b>Cap :</b> : {{fattura.cliente.indirizzoSedeOperativa.cap}}</p>
+                    <p class="card-text"><b>Localita </b> :{{fattura.cliente.indirizzoSedeOperativa.localita}}</p>
+                </div>
+
+
+                <div class="container mb-5">
+                    <p style="background-color:lightgray;"><small>indirizzo sede legale:</small></p>
+                    <p class="card-text"><b>Via :</b> {{fattura.cliente.indirizzoSedeLegale.via}}</p>
+                    <p class="card-text"><b>Civico :</b>{{fattura.cliente.indirizzoSedeLegale.civico}}</p>
+                    <p class="card-text"><b>Cap :</b> {{fattura.cliente.indirizzoSedeLegale.cap}}</p>
+                    <p class="card-text"><b>Localita :</b>{{fattura.cliente.indirizzoSedeLegale.localita}}</p>
+                </div>
+                <p class="card-text"><b>dataInserimento: </b>{{fattura.cliente.dataInserimento}}</p>
+                <p class="card-text mb-5"><b>dataUltimoContatto: </b>{{fattura.cliente.dataUltimoContatto}}</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-warning" (click)="edit(fattura)">Modifica</button>
+    </div>
+</div>

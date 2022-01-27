@@ -1,0 +1,33 @@
+<div class="card mb-5">
+  <div class="card-header">
+    <h3>Aggiungi fattura</h3>
+  </div>
+  <div class="card-body">
+    <input type="number" [(ngModel)]="fattura.numero" name="numeroFattura" placeholder="numero fattura.."
+      class="form-control my-2">
+    <input type="number" [(ngModel)]="fattura.anno" name="annoFattura" placeholder="anno fattura.."
+      class="form-control my-2">
+    <input type="number" [(ngModel)]="fattura.importo" name="importoFattura" placeholder="importo fattura.."
+      class="form-control my-2">
+    <div>
+      <small>Stato fattura:</small>
+      <div>
+        <select [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
+          <option [ngValue]="item" *ngFor="let item of stato">
+            {{item.nome}}
+          </option>
+        </select>
+      </div>
+      <small>Nome cliente:</small>
+      <div>
+        <select [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone: true}">
+          <option [ngValue]="item" *ngFor="let item of clienti">
+            {{item.ragioneSociale}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-info mt-5" (click)="newFattura()">Aggiungi fattura</button>
+  </div>
+</div>

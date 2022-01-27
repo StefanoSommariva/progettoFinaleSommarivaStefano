@@ -1,0 +1,16 @@
+<div style="height:75vh">
+    <div class="card">
+        <div class="card-header">
+            <h3>Aggiungi provincia</h3>
+        </div>
+        <div class="card-body">
+            <input type="text" [(ngModel)]="provincia.nome" name="provinciaNome" class="form-control my-3"
+                placeholder="nome..">
+            <input type="text" [(ngModel)]="provincia.sigla" name="siglaProvincia" class="form-control my-3"
+                placeholder="sigla..">
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-info" (click)="newProvincia()">Aggiungi Provincia</button>
+        </div>
+    </div>
+</div>

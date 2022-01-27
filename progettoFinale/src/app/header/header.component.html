@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+ 
+    <a class="navbar-brand" href="#"><i class="bi bi-journals"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Clients
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" [routerLink]="['/clients']" routerLinkActive="router-link-active">Lista
+              clienti</a>
+            <a class="dropdown-item" href="#" [routerLink]="['/client/new']"
+              routerLinkActive="router-link-active">Aggiungi cliente</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Comuni
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" [routerLink]="['/comuni']" routerLinkActive="router-link-active">Lista
+              comuni</a>
+            <a class="dropdown-item" href="#" [routerLink]="['/comuni/new']"
+              routerLinkActive="router-link-active">Aggiungi comune</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Province
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" [routerLink]="['/province']" routerLinkActive="router-link-active">Lista
+              provincia</a>
+            <a class="dropdown-item" href="#" [routerLink]="['/province/new']"
+              routerLinkActive="router-link-active">Aggiungi provincia</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Fatture
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" [routerLink]="['/fatture']" routerLinkActive="router-link-active">Lista fatture</a>
+            <a class="dropdown-item" href="#" [routerLink]="['/fatture/new']"
+              routerLinkActive="router-link-active">Aggiungi fattura</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+</nav>

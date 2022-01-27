@@ -1,0 +1,24 @@
+.card, .carousel{
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.171);
+}
+.card-footer{
+    background-color:rgba(255, 0, 0, 0.411);
+}
+.prima, .seconda, .terza{
+    width: 100%;
+    height: 15em;
+    border: 1px solid black;
+  
+}
+.prima{
+    background-image: url("https://doodleipsum.com/700x394/abstract?bg=825DEB&i=70fc7f630d9fd45c76d2f181e0bc9bf1");
+    background-size: contain;
+}
+.seconda{
+    background-image: url("https://doodleipsum.com/700x394/abstract?bg=825DEB&i=c194787e015a971b4da76eccefb9bfa7");
+    background-size: contain;
+}
+.terza{
+    background-image: url("https://doodleipsum.com/700x394/abstract?bg=825DEB&i=bca1e8588e68e8c73a6b721edae668c9");
+    background-size: contain;
+}

@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        <h3>Dettaglio del comune</h3>
+    </div>
+    <div class="card-body">
+        <h5>Nome comune: {{comune.nome}}</h5>
+        <p></p>
+        <p class="card-text">provincia: {{comune.provincia.nome}} ({{comune.provincia.sigla}})</p>
+        <p class="card-text">id: {{comune.id}}</p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-info" (click)="edit(comune)">Modifica informazioni</button>
+    </div>
+</div>
