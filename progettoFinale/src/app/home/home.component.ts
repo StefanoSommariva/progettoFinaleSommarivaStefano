@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(new Date().toISOString())
   }
   clienti() {
     this.router.navigate(['clients'])

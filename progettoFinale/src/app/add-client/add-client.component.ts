@@ -40,8 +40,8 @@ export class AddClientComponent implements OnInit {
   }
 
   newClient() {
-    this.client.dataInserimento = new Date('2019-06-01T08:11:01.911+00:00')
-    this.client.dataUltimoContatto = new Date('2019-06-01T08:11:01.911+00:00')
+    this.client.dataInserimento = new Date().toISOString()
+    this.client.dataUltimoContatto = new Date().toISOString()
     this.clientService.createClient(this.client).subscribe(response => console.log(response));
     this.router.navigate(['clients'])
    

@@ -17,8 +17,8 @@ export class Client {
     emailContatto!: string;
     indirizzoSedeOperativa!: IndirizzoOperativo
     indirizzoSedeLegale!: IndirizzoLegale
-    dataInserimento!: Date
-    dataUltimoContatto!: Date
+    dataInserimento!: string
+    dataUltimoContatto!: string
     fatturatoAnnuale?: number
 
     constructor () {

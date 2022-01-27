@@ -21,6 +21,7 @@ import { ProvinceListComponent } from './province-list/province-list.component';
 const routes: Routes = [
   {path: "clients", component: ClientListComponent},
   {path: "" , component:HomeComponent },
+  /* {path: "home", component: HomeComponent}, */
   {path: "client/:id/detail", component:ClientDetailComponent},
   {path: "client/:id/edit", component: ClientEditComponent},
   {path: "client/new", component: AddClientComponent},

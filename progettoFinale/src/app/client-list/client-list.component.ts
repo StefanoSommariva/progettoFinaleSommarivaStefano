@@ -40,7 +40,6 @@ export class ClientListComponent implements OnInit {
       case "mod1":
         this.clientService.getByFatturato().subscribe(response => {
           this.clienti = response.content
-          this.router.navigate(['client'])
         })
         
         
@@ -48,21 +47,18 @@ export class ClientListComponent implements OnInit {
       case "mod2":
         this.clientService.getByDataInserimento().subscribe(response => {
           this.clienti = response.content
-          this.router.navigate(['client'])
         })
         
          break;
       case "mod3":
         this.clientService.getByDataUltimoContatto().subscribe(response => {
           this.clienti = response.content
-          this.router.navigate(['client'])
         })
          break;
 
          case "mod4":
           this.clientService.getByRagioneSociale().subscribe(response => {
             this.clienti = response.content
-            this.router.navigate(['client'])
           })
          break;
     }

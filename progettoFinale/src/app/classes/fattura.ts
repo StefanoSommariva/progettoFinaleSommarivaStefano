@@ -3,7 +3,7 @@ import { Stato } from "./stato";
 
 export class Fattura {
     id?: number;
-    data!: Date
+    data!: string
     numero!: number;
     anno!: number;
     importo!: string;

@@ -27,6 +27,7 @@ import { FatturaDetailComponent } from './fattura-detail/fattura-detail.componen
 import { FatturaEditComponent } from './fattura-edit/fattura-edit.component';
 import { FatturaAddComponent } from './fattura-add/fattura-add.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { FatturaAddComponent } from './fattura-add/fattura-add.component';
     FatturaListComponent,
     FatturaDetailComponent,
     FatturaEditComponent,
-    FatturaAddComponent
+    FatturaAddComponent,
+ 
   ],
   imports: [
     BrowserModule,

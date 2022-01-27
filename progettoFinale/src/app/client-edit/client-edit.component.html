@@ -1,4 +1,4 @@
-<div class="card text-center bg-info">
+<div class="card text-center bg-secondary">
     <div class="card-header">
         <h2>Modifica cliente</h2>
     </div>
@@ -24,7 +24,7 @@
         <label for="emailContatto">Email contatto:</label>
         <input type="text" [(ngModel)]="client.emailContatto" name="emailContatto" class="form-control mb-2">
 <!-- sede operativa -->
-        <div class="container bg-primary text-left mb-5">
+        <div class="container text-left mb-5">
             <h3>Indirizzo sede operativa:</h3>
             <label for="via">Via:</label>
             <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" name="via" class="form-control mb-2">
@@ -37,7 +37,7 @@
             <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.localita" name="localita"
                 class="form-control mb-2">
 
-            <div class="container bg-secondary text-left">
+            <div class="container text-left">
                 <h3>Comune:</h3>
                 <label for="id">ID:</label>
                 <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.id" name="via"
@@ -46,7 +46,7 @@
                 <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" name="nome"
                     class="form-control mb-2">
 
-                <div class="container bg-dark">
+                <div class="container">
                     <h5>Provincia:</h5>
                     <label for="nomeProv"></label>
                     <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" name="nomeProv"
@@ -58,7 +58,7 @@
 
             </div>
         </div>
-        <div class="container bg-primary text-left">
+        <div class="container text-left">
             <h3>Indirizzo sede legale:</h3>
             <label for="via">Via:</label>
             <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" name="via" class="form-control mb-2">
@@ -71,7 +71,7 @@
             <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" name="localita"
                 class="form-control mb-2">
 
-            <div class="container bg-secondary text-left">
+            <div class="container text-left">
                 <h3>Comune:</h3>
                 <label for="id">ID:</label>
                 <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.id" name="via"
@@ -80,7 +80,7 @@
                 <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.nome" name="nome"
                     class="form-control mb-2">
 
-                <div class="container bg-dark">
+                <div class="container">
                     <h5>Provincia:</h5>
                     <label for="nomeProv"></label>
                     <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.nome" name="nomeProv"
@@ -103,6 +103,6 @@
         <input type="text" [(ngModel)]="client.fatturatoAnnuale" name="fatturatoAnnuale" class="form-control mb-2">
     </div>
     <div class="card-footer">
-        <button type="button" class="btn btn-dark" (click)="update()">Modifica Prodotto</button>
+        <button type="button" class="btn btn-dark" (click)="update()">Modifica cliente</button>
     </div>
 </div>

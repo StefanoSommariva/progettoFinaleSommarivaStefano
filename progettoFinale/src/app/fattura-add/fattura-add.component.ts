@@ -36,7 +36,7 @@ export class FatturaAddComponent implements OnInit {
     })
   }
   newFattura() {
-    this.fattura.data = new Date("2020-12-15T22:22:04.571+00:00")
+    this.fattura.data = new Date().toISOString()
     this.fatturaService.createFattura(this.fattura).subscribe(response => console.log(response))
     this.router.navigate(['fatture'])
   }
