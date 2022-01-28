@@ -1,87 +1,27 @@
-<div class="card">
+<div class="card mb-5">
     <div class="card-header">
         Modifica fattura
     </div>
     <div class="card-body">
+
         <form>
-            <form>
-                <input type="text" [(ngModel)]="fattura.data"  name="dasda" class="form-control">
-                <input type="text" [(ngModel)]="fattura.numero"  name="fdsfddf" class="form-control">
-                <input type="text" [(ngModel)]="fattura.anno"  name="dasdsadda" class="form-control">
-                <input type="text" [(ngModel)]="fattura.importo"  name="ddsdsasda" class="form-control">
-                <input type="text" [(ngModel)]="fattura.stato.nome"  name="dsds" class="form-control">
-            </form>
-            <p>dati cliente:</p>
-            <div class="form-group">
-                <label for="name"><b>Nome Contatto</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.nomeContatto" name="name" class="form-control"
-                    id="name">
+            <label for="data">data fattura:</label>
+            <input type="text" [(ngModel)]="fattura.data" name="data" class="form-control">
+            <label for="numbero">numero fattura:</label>
+            <input type="text" [(ngModel)]="fattura.numero" name="numero" class="form-control">
+            <label for="anno">anno fattura</label>
+            <input type="text" [(ngModel)]="fattura.anno" name="anno" class="form-control">
+            <label for="importo">importo fattura</label>
+            <input type="text" [(ngModel)]="fattura.importo" name="importo" class="form-control">
+            <label for="stato">stato fattura:</label>
+            <div>
+                <select [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="item" *ngFor="let item of stato">
+                        {{item.nome}}
+                    </option>
+                </select>
             </div>
-            <div class="form-group">
-                <label for="name"><b>Cognome Contatto</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.cognomeContatto" name="surnamename" class="form-control"
-                    id="asdfa">
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Telefono Contatto</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.telefonoContatto" name="telefono" class="form-control"
-                    id="fdgfdg">
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Pec</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.pec" name="pec" class="form-control" >
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Partita Iva</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.partitaIva" name="iva" class="form-control" >
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Ragione Sociale</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.ragioneSociale" name="sociale" class="form-control"
-                    id="dfsfg">
-            </div>
-
-            <div class="form-group">
-                <label for="name"><b>Numero telefono</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.telefono" name="tele" class="form-control" id="sfgsas">
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Data Inserimento</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.dataInserimento" name="inseriment" class="form-control"
-                    id="sdgssg">
-            </div>
-            <div class="form-group">
-                <label for="name"><b>Data Ultimo Contatto</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.dataUltimoContatto" name="contatto" class="form-control"
-                    id="asfdgas">
-            </div>
-            <div class="form-group">
-                <label for="name"><b>tipo Cliente</b></label>
-                <input type="text" [(ngModel)]="fattura.cliente.tipoCliente" class="form-control" id="asfdgas">
-            </div>
-
-            <label for="indirizzo1"><b>Indirizzo sede operativa :</b></label> &nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.via" name="via"
-                placeholder="Inserisci via.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.civico" name="civico"
-                placeholder="Inserisci civico.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.cap" name="cap"
-                placeholder="Inserisci cap.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.localita" name="localita"
-                placeholder="Inserisci località.." class="form mb-2"> &nbsp;
-            <br>
-            <label for="indirizzo1"><b>Indirizzo sede legale :</b></label> &nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.via" name="via2"
-                placeholder="Inserisci via.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.civico" name="civico3"
-                placeholder="Inserisci civico.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.cap" name="cap4"
-                placeholder="Inserisci cap.." class="form mb-2">&nbsp;
-            <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.localita" name="localita5"
-                placeholder="Inserisci località.." class="form mb-2">&nbsp;
-
         </form>
-
     </div>
     <div class="card-footer">
         <button type="button" class="btn bg-warning form-control" (click)="update()">Applica Modifiche &nbsp;<i
