@@ -41,7 +41,7 @@ export class FatturaListComponent implements OnInit {
         this.fatturaService.getBystato().subscribe(response => {
           this.fattura = response.content
       
-          this.router.navigate(['fatture'])
+      
         })
         
         
@@ -50,7 +50,7 @@ export class FatturaListComponent implements OnInit {
         this.fatturaService.getByAnno().subscribe(response => {
           this.fattura = response.content
       
-          this.router.navigate(['fatture'])
+       
         })
         
          break;
@@ -58,7 +58,7 @@ export class FatturaListComponent implements OnInit {
         this.fatturaService.getByData().subscribe(response => {
           this.fattura = response.content
        
-          this.router.navigate(['fatture'])
+      
         })
          break;
 
@@ -66,7 +66,7 @@ export class FatturaListComponent implements OnInit {
           this.fatturaService.getByImporto().subscribe(response => {
             this.fattura = response.content
       
-            this.router.navigate(['fatture'])
+       
           })
          break;
     }
